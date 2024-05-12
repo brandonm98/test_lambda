@@ -5,9 +5,15 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json({ message: 'Hello from Express on AWS Lambda!' });
   });
+
+// const port = 3000;
+
+// app.listen(port, () => {
+// console.log(`Sever running on port: ${port}`);
+// });
 
 export const handler = serverless(app);
 
