@@ -3,6 +3,8 @@ import serverless from 'serverless-http';
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
     res.json({ message: 'Hello from Express on AWS Lambda!' });
   });
